@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>统计</title>
+    <meta name="wap-font-scale" content="no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="../js/common.js"></script>
+    <link rel="stylesheet" href="../css/count.css">
+    <link rel="stylesheet" href="../css/LCalendar.css">
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <ul class="tbl_type nav_head">
+            <li class="tbl_cell active">日统计</li>
+            <li class="tbl_cell">我的</li>
+        </ul>
+    </header>
+
+    <section>
+        <div class="choose_day">
+            <div>
+                <input type="text" class="input" id="input" readonly placeholder="选择日期">
+                <i></i>
+            </div>
+        </div>
+        <div class="show_count">
+            <div class="circle_con">
+                <canvas class="canvas_1"></canvas>
+                <canvas class="canvas_2"></canvas>
+                <span class="person">打卡人数 / 应到人数</span>
+                <span class="p_detail">打卡明细 <i></i></span>
+            </div>
+            <div class="show_list">
+                <ul class="tbl_type">
+                    <li class="tbl_cell">
+                        <em>50</em>
+                        <span>未打卡</span>
+                    </li>
+                    <li class="tbl_cell">
+                        <em>0</em>
+                        <span>迟到</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mask"></div>
+        <div class="item1">
+            <ul class="tbl_type">
+                <li class="tbl_cell toTop1">
+                    <span>小鱼</span>
+                    <em><i></i>早到榜</em>
+                </li>
+                <li class="tbl_cell toTop2">
+                    <span>嘉兴</span>
+                    <em><i></i>勤奋榜</em>
+                </li>
+                <li class="tbl_cell toTop3">
+                    <span>恩呢</span>
+                    <em><i></i>迟到榜</em>
+                </li>
+            </ul>
+        </div>
+        <div class="item2">
+            <div class="clearfix content1">
+                <span class="fl">5月17日班级排行</span>
+                <span class="fr">出勤人数</span>
+            </div>
+            <div class="item_con">
+                <div class="item_list clearfix">
+                    <div class="class_name fl">初三(2)班</div>
+                    <div class="nav_con fl">
+                        <div class="nav_bar"></div>
+                    </div>
+                    <div class="class_num fr">35/35</div>
+                </div>
+                <div class="item_list clearfix">
+                    <div class="class_name fl">初二(5)班</div>
+                    <div class="nav_con fl">
+                        <div class="nav_bar"></div>
+                    </div>
+                    <div class="class_num fr">32/50</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="../js/LCalendar.js"></script>
+<script src="../js/count.js"></script>
+<script>
+    var calendar = new LCalendar();
+    calendar.init({
+        'trigger': '#input', //标签id
+        'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+        'minDate': '1900-1-1', //最小日期
+        'maxDate': new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate() //最大日期
+    });
+</script>
+
+</body>
+</html>

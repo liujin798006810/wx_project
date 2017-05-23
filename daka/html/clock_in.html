@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>打卡统计</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="wap-font-scale" content="no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/clock_in.css">
+    <script src="../js/common1.js"></script>
+</head>
+
+<body>
+    <!-- 导航 -->
+    <div class="tab">
+        <div class="tab-left">日统计</div>
+        <div class="tab-right">我的</div>
+    </div>
+
+    <!-- 个人信息 -->
+    <div class="user-info">
+        <div class="user-avatar"></div>
+        <div class="user-content">
+            <p class="user-name">廖嘉欣</p>
+            <p class="user-group">考勤组：初三（2）班</p>
+            <span class="user-date">2017年5月<i class="down"></i></span>
+        </div>
+    </div>
+
+    <!-- 早到榜 -->
+    <div class="early-top">
+        <span>今日早到榜</span>
+        <span class="top-list">第2名<i class="right"></i></span>
+    </div>
+    <div class="month-count">考勤月度统计</div>
+
+    <!-- 出勤天数 -->
+    <div class="common attend">
+        <div class="common-head no-border-bottom">
+            <span class="title">上课天数</span>
+            <span class="count">5 天<i class="down"></i></span>
+        </div>
+        <ul class="list">
+            <li class="common-item">2017-05-06 (星期六)</li>
+            <li class="common-item">2017-05-06 (星期六)</li>
+            <li class="common-item">2017-05-06 (星期六)</li>
+            <li class="common-item">2017-05-06 (星期六)</li>
+            <li class="common-item">2017-05-06 (星期六)</li>
+        </ul>
+    </div>
+
+    <!-- 休息天数 -->
+    <div class="common rest">
+        <div class="common-head no-border-bottom">
+            <span class="title">休息天数</span>
+            <span class="count">2 天<i class="down"></i></span>
+        </div>
+        <ul class="list">
+            <li class="common-item">2017-05-06 (星期六)</li>
+            <li class="common-item">2017-05-06 (星期六)</li>
+        </ul>
+    </div>
+
+    <!-- 迟到天数 -->
+    <div class="common late">
+        <div class="common-head no-border-bottom">
+            <span class="title">迟到</span>
+            <span class="count">1次，共10分钟<i class="down"></i></span>
+        </div>
+        <ul class="list">
+            <li class="common-item">
+                <p>2017-05-06 (星期六)</p>
+                <p class="late-detail">上课迟到10分钟</p>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- 平均上课时间 -->
+    <div class="average">本月平均上课7小时30分钟</div>
+    
+    <!-- 选择月份弹窗 -->
+    <div class="choose-month-mask">
+        <ul class="choose-month"></ul>
+    </div>
+
+    <!-- 列表为空的时候弹窗 -->
+    <div class="msg-info"></div>
+
+    <script src="../js/clock_in.js"></script>
+</body>
+
+</html>
